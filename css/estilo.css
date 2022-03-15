@@ -1,73 +1,56 @@
-/*index*/
+/* index */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  height: 100%;
-}
+
 body {
   font-family: "Roboto", sans-serif;
-  min-height: 100%;
   background-color: #ffffff;
 }
-.grid-container > * {
-  padding: 10px;
-  text-align: center;
+.grid__container {
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "main main main"
+    "widget-1 widget-1 widget-1"
+    "widget-2 widget-2 widget-2"
+    "footer footer footer";
 }
-.header {
+.contenedor > div,
+.contenedor .header,
+.contenedor .main,
+.contenedor .footer {
+  padding: 20px;
+}
+.contenedor .header {
   grid-area: header;
   background-color: white;
+  display: flex;
+  text-align: start;
 }
-.navbar {
-  grid-area: navbar;
-  background-color: white;
-}
-.main {
+.contenedor .main {
   grid-area: main;
   background-color: white;
 }
-.footer {
+.contenedor .widget-1 {
+  grid-area: widget-1;
+}
+.contenedor .widget-2 {
+  grid-area: widget-2;
+}
+.contenedor .footer {
   grid-area: footer;
   background-color: #9bcaf2;
+  text-align: center;
 }
-.grid-container {
-  display: grid;
-  gap: 10px;
-  grid-template:
-    "header" 100px
-    "navbar" 50px
-    "main" auto
-    "footer" 100px;
-}
-@media only screen and(min-width: 600px) {
-  .grid-container {
-    /* grid-template-columns: 200px auto;
-    grid-template-rows: 100px 50px auto 100px;
-    grid-template-areas: 
-    "header  header"
-    "navbar  navbar"
-    "sidebar main"
-    "footer  footer"; */
 
-    grid-template:
-      "header header" 100px
-      "navbar navbar" 50px
-      "main main" auto
-      "footer footer" 100px /
-      200px auto;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .grid-container {
-    grid-template:
-      "header  header header" 100px
-      "navbar  main" auto
-      "footer  footer footer" 100px /
-      200px auto 200px;
-  }
-}
 .titulo {
   display: flex;
 }
@@ -79,8 +62,9 @@ body {
   display: block;
 }
 .subtitulo {
+  display: flex;
   color: #2477bf;
-  text-align: center;
+  justify-content: center;
 }
 
 .texto {
@@ -89,27 +73,28 @@ body {
   color: #111;
   text-align: justify;
 }
-
 .texto2 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-align: justify;
 }
 
-/*Esto es la barra de navegacion*/
+/* Termina el index */
+
+/* Esto es el nav */
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
+  list-style: none;
 }
 
 nav ul li a {
   color: #2477bf;
-  display: flexbox;
+  display: flex;
   padding: 10px;
-  text-decoration: none;
   display: block;
+  text-decoration: none;
 }
 nav ul li a:hover {
   font-weight: bold;
@@ -118,16 +103,49 @@ nav ul li .contacto2 {
   display: block;
   color: #2477bf;
 }
+.navbar a:hover {
+  text-shadow: 5px 5px 5px #2477bf;
+}
+
+/* Termina el nav */
+
+/* Skill set */
+
 .imag {
   height: 100px;
   width: 100px;
 }
+.imag:hover {
+  box-shadow: 5px 5px 5px #2477bf;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Projects */
+
+.video:hover {
+  box-shadow: 5px 5px 5px #2477bf;
+}
+.video {
+  display: flex;
+  margin: auto;
+  padding: auto;
+}
+/* termina projects */
 
 /* Footer */
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
   background-color: #9bcaf2;
-  padding: 40px 0;
+  padding: 40px;
 }
 footer a {
   color: white;
@@ -136,70 +154,41 @@ footer a {
   text-decoration: none;
   display: block;
 }
-.media {
+.footer__media {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: auto;
   margin: auto;
 }
-.media img {
+.footer__media img {
   width: 30px;
   height: 30px;
 }
-.abajo {
+.footer__abajo {
   display: flex;
   justify-content: center;
   padding-bottom: 25px;
   list-style-type: none;
 }
-
-.footer ul a:hover {
+.footer__abajo a:hover {
+  text-decoration: underline;
+}
+.footer__copy {
   opacity: 1;
-}
-iframe {
-  width: 250px;
-  height: 150px;
-  border: 2px double grey;
-}
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-iframe:hover {
-  opacity: 1;
-  border: #9bcaf2;
+  text-align: center;
 }
 
-/*contacto*/
-.contenedor {
-  max-width: 1170px;
+/* contacto */
+.contenedor-form {
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding: 1.5em;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-.agrupar > * {
-  padding: 1em;
-}
-.contact-form form {
   display: grid;
+  grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
-}
-.contact-form form label {
-  display: block;
-}
-.contact-form form p {
-  margin: 0;
-  padding: 1em;
-}
-.contact-form form .block {
-  grid-column: 1 / 3;
+  grid-template-rows: 1fr;
 }
 .contact-form form button,
 .contact-form form input,
@@ -210,6 +199,19 @@ ul {
   background: none;
   outline: none;
   border-bottom: 1px solid black;
+}
+.agrupar > * {
+  padding: 1em;
+}
+.contact-form form label {
+  display: block;
+}
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+.contact-form form .block {
+  grid-column: 1 / 3;
 }
 .contact-form form button {
   background: #9bcaf2;
@@ -232,28 +234,47 @@ ul {
   text-align: center;
   margin: 0 0 1rem 0;
 }
-.contact-info ul {
+.contact-info .moreinf {
   list-style: none;
   padding: 0;
 }
 .contact-info ul li {
   padding: 0.3em;
 }
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+  text-align: left;
+}
 
-@media (min-width: 700px) {
-  body {
-    padding: 0 4rem;
+.agrupar > * {
+  padding: 2em;
+}
+.moreinf {
+  list-style: none;
+  padding: 0;
+}
+
+/* media de home */
+@media only screen and (max-width: 768px) {
+  .contenedor-form {
+    grid-template:
+      "header header header"
+      "navbar navbar navbar"
+      "main main main"
+      "widget-1 widget-1"
+      "widget-2 widget-2"
+      "footer footer footer";
   }
-  .agrupar {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .agrupar > * {
-    padding: 2em;
-  }
-  .contact-info h4,
-  .contact-info ul,
-  .contact-info p {
-    text-align: left;
+}
+@media only screen and(max-width: 460px) {
+  .contenedor-form {
+    grid-template-areas:
+      "header header header"
+      "navbar navbar navbar"
+      "main main main"
+      "widget-1"
+      "widget-2"
+      "footer footer footer";
   }
 }
