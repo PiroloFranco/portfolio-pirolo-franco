@@ -103,10 +103,14 @@ nav ul li .contacto2 {
   display: block;
   color: #2477bf;
 }
+
 .navbar a:hover {
-  text-shadow: 5px 5px 5px #2477bf;
+  transition: transform 0.2s;
 }
 
+.navbar a:hover {
+  transform: scale(1.5);
+}
 /* Termina el nav */
 
 /* Skill set */
@@ -165,7 +169,7 @@ footer a {
 .footer__media {
   display: flex;
   text-align: center;
-  float: none;
+  align-self: center;
   padding: auto;
   margin: auto;
 }
