@@ -151,8 +151,7 @@ section {
 /* Footer */
 
 footer {
-  display: flex;
-  align-self: flex-end;
+  display: inline-block;
   line-height: 3;
   text-align: center;
   width: 100%;
@@ -167,7 +166,7 @@ footer a {
   display: block;
 }
 .footer__media {
-  display: flex;
+  display: inline;
   text-align: center;
   align-self: center;
   padding: auto;
