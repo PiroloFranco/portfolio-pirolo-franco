@@ -1,0 +1,19 @@
+.titulo {
+  display: flex;
+  a {
+    color: #2477bf;
+    display: flexbox;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      transition: 1s;
+      color: $bg-claro;
+    }
+  }
+}
+.subtitulo {
+  display: flex;
+  color: $bg-oscuro;
+  justify-content: center;
+}

@@ -1,0 +1,12 @@
+$bg-claro: #9bcaf2;
+$bg-oscuro: #2477bf;
+
+@extend .contact-info;
+@mixin hover {
+  a:hover {
+    transition: transform 0.3s;
+  }
+  a:hover {
+    transform: scale(1.5);
+  }
+}

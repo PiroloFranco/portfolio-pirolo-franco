@@ -1,0 +1,57 @@
+/* Texto */
+.texto,
+.texto2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+}
+.texto,
+.texto2 {
+  position: r;
+}
+
+.texto,
+.texto2,
+.texto3,
+.texto4 {
+  margin: 20px;
+}
+
+/* Termina el texto */
+
+/* Skill set */
+
+.imag {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  &:hover {
+    box-shadow: 5px 5px 5px $bg-oscuro;
+  }
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Projects */
+
+.video {
+  display: flex;
+  margin: 30px;
+  margin-bottom: 100px;
+  padding: auto;
+  &:hover {
+    box-shadow: 5px 5px 5px $bg-oscuro;
+  }
+}
+.video {
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* termina projects */

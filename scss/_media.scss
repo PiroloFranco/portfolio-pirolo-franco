@@ -1,0 +1,30 @@
+/* media de home */
+@media only screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "header header header"
+      "navbar navbar navbar"
+      "main main main"
+      "widget-1 widget-1"
+      "widget-2 widget-2"
+      "footer footer footer";
+  }
+}
+@media only screen and(max-width: 460px) {
+  .contenedor {
+    grid-template-areas:
+      "header header header"
+      "navbar navbar navbar"
+      "main main main"
+      "widget-1"
+      "widget-2"
+      "footer footer footer";
+  }
+}
+/* media de contacto */
+@media only screen and(max-width: 460px) {
+  .agrupar {
+    display: flex;
+    justify-content: center;
+  }
+}

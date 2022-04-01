@@ -1,0 +1,25 @@
+/* Esto es el nav */
+
+.navbar {
+  @include hover;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  li {
+    display: block;
+    color: $bg-oscuro;
+    a {
+      color: $bg-oscuro;
+      padding: 15px;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* Termina el nav */
