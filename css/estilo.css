@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,14 +15,20 @@ body {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (auto)[6];
-      grid-template-rows: repeat(6, auto);
-      grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "widget-1 widget-1 widget-1" "widget-2 widget-2 widget-2" "footer footer footer";
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (auto) [6];
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "main main main"
+    "widget-1 widget-1 widget-1"
+    "widget-2 widget-2 widget-2"
+    "footer footer footer";
 }
 
-.contenedor > div,
+.contenedor>div,
 .contenedor .header,
 .contenedor .main,
 .contenedor .footer {
@@ -30,9 +36,9 @@ body {
 }
 
 .contenedor .header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  grid-row: 1;
+  grid-column: 1;
+  grid-column: 3;
   grid-area: header;
   background-color: white;
   display: -webkit-box;
@@ -42,8 +48,8 @@ body {
 }
 
 .contenedor .main {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  grid-row: 3;
+  grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: main;
   background-color: white;
@@ -68,6 +74,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
+  background-color: #9bcaf2;
   text-align: center;
 }
 
@@ -97,8 +104,8 @@ body {
   display: flex;
   color: #2477bf;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Esto es el nav */
@@ -111,7 +118,7 @@ body {
 
 .navbar a:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 nav ul {
@@ -119,8 +126,8 @@ nav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
 }
 
@@ -171,7 +178,7 @@ nav ul li a:hover {
 
 .imag:hover {
   -webkit-box-shadow: 5px 5px 5px #2477bf;
-          box-shadow: 5px 5px 5px #2477bf;
+  box-shadow: 5px 5px 5px #2477bf;
 }
 
 section {
@@ -180,13 +187,13 @@ section {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 /* Projects */
@@ -201,7 +208,7 @@ section {
 
 .video:hover {
   -webkit-box-shadow: 5px 5px 5px #2477bf;
-          box-shadow: 5px 5px 5px #2477bf;
+  box-shadow: 5px 5px 5px #2477bf;
 }
 
 .video {
@@ -213,7 +220,7 @@ section {
 
 .video:hover {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /* termina projects */
@@ -227,9 +234,9 @@ section {
   display: grid;
   grid-gap: 20px;
   -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
 }
 
 .contact-form form button,
@@ -243,7 +250,7 @@ section {
   border-bottom: 1px solid black;
 }
 
-.agrupar > * {
+.agrupar>* {
   padding: 1em;
 }
 
@@ -277,37 +284,33 @@ section {
   outline: 0;
 }
 
-.contact-info, .contenedor .footer {
+.contact-info {
   background: #9bcaf2;
 }
 
-.contact-info h4, .contenedor .footer h4,
+.contact-info h4,
 .contact-info ul,
-.contenedor .footer ul,
-.contact-info p,
-.contenedor .footer p {
+.contact-info p {
   text-align: center;
   margin: 15px;
 }
 
-.contact-info .moreinf, .contenedor .footer .moreinf {
+.contact-info .moreinf {
   list-style: none;
   padding: 0;
 }
 
-.contact-info ul li, .contenedor .footer ul li {
+.contact-info ul li {
   padding: 0.3em;
 }
 
-.contact-info h4, .contenedor .footer h4,
+.contact-info h4,
 .contact-info ul,
-.contenedor .footer ul,
-.contact-info p,
-.contenedor .footer p {
+.contact-info p {
   text-align: left;
 }
 
-.agrupar > * {
+.agrupar>* {
   padding: 2em;
 }
 
@@ -339,8 +342,8 @@ footer .footer__media {
   display: inline;
   text-align: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   padding: auto;
   margin: auto;
 }
@@ -359,7 +362,7 @@ footer .footer__media-1 {
 
 footer .footer__media-1:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 footer .footer__media-2 {
@@ -371,7 +374,7 @@ footer .footer__media-2 {
 
 footer .footer__media-2:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 footer .footer__abajo {
@@ -379,8 +382,8 @@ footer .footer__abajo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-bottom: 25px;
   list-style-type: none;
 }
@@ -397,13 +400,25 @@ footer .footer__copy {
 /* media de home */
 @media only screen and (max-width: 768px) {
   .contenedor {
-        grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "widget-1 widget-1" "widget-2 widget-2" "footer footer footer";
+    grid-template-areas:
+      "header header header"
+      "navbar navbar navbar"
+      "main main main"
+      "widget-1 widget-1"
+      "widget-2 widget-2"
+      "footer footer footer";
   }
 }
 
 @media only screen and (max-width: 460px) {
   .contenedor {
-        grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "widget-1" "widget-2" "footer footer footer";
+    grid-template-areas:
+      "header header header"
+      "navbar navbar navbar"
+      "main main main"
+      "widget-1"
+      "widget-2"
+      "footer footer footer";
   }
 }
 
@@ -414,8 +429,9 @@ footer .footer__copy {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
+
 /*# sourceMappingURL=estilo.css.map */

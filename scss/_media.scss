@@ -10,6 +10,8 @@
       "footer footer footer";
   }
 }
+
+
 @media only screen and(max-width: 460px) {
   .contenedor {
     grid-template-areas:
@@ -20,9 +22,6 @@
       "widget-2"
       "footer footer footer";
   }
-}
-/* media de contacto */
-@media only screen and(max-width: 460px) {
   .agrupar {
     display: flex;
     justify-content: center;

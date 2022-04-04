@@ -32,6 +32,7 @@ body {
 .contenedor {
   .header {
     grid-area: header;
+    grid-row: 1;
     background-color: white;
     display: flex;
     text-align: start;
