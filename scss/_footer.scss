@@ -40,10 +40,12 @@ footer {
     justify-content: center;
     padding-bottom: 25px;
     list-style-type: none;
-    &:hover {
-      text-decoration: underline;
-    }
+    a{
+   &:hover {
+     text-decoration: underline;
+   }
   }
+}
 
   .footer__copy {
     opacity: 1;

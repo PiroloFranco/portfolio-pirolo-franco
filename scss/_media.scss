@@ -8,11 +8,13 @@
       "widget-1 widget-1"
       "widget-2 widget-2"
       "footer footer footer";
-  }
+    }
+    body {
+      background-color: black;
+    }    
 }
 
-
-@media only screen and(max-width: 460px) {
+@media only screen and (min-width: 460px) {
   .contenedor {
     grid-template-areas:
       "header header header"
