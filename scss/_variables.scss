@@ -2,6 +2,7 @@ $bg-claro: #9bcaf2;
 $bg-oscuro: #2477bf;
 
 @extend .contact-info;
+
 @mixin hover {
   a:hover {
     transition: transform 0.3s;
@@ -10,3 +11,26 @@ $bg-oscuro: #2477bf;
     transform: scale(1.5);
   }
 }
+  @mixin grid-areas {
+    body {
+        .widget-1 { grid-area: widget-1; }
+        .widget-2 { grid-area: widget-2; }
+        .navbar { grid-area: navbar; }
+        .main { grid-area: main;
+            header { grid-area: header; }
+            .footer {grid-area: footer; }
+          } 
+        }
+
+        @vista:mobile;
+        body{
+          @if $vista == tablet {
+            @media only screen and (min-width: 768px){
+                
+              }
+             } @else if $vista == mobile {
+               @media only screen and (max-width: 468px){
+
+               }
+             }
+            }

@@ -31,26 +31,5 @@ body {
   padding: 20px;
 }
 .contenedor {
-  .header {
-    grid-area: header;
-    grid-row: 1;
-    background-color: white;
-    display: flex;
-    text-align: start;
-  }
-  .main {
-    grid-area: main;
-    background-color: white;
-  }
-  .widget-1 {
-    grid-area: widget-1;
-  }
-  .widget-2 {
-    grid-area: widget-2;
-  }
-  .footer {
-    grid-area: footer;
-    @extend .contact-info;
-    text-align: center;
-  }
+  @include grid-areas;
 }

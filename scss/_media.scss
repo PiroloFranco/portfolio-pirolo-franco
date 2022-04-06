@@ -9,9 +9,6 @@
       "widget-2 widget-2"
       "footer footer footer";
     }
-    body {
-      background-color: black;
-    }    
 }
 
 @media only screen and (min-width: 460px) {
@@ -24,8 +21,5 @@
       "widget-2"
       "footer footer footer";
   }
-  .agrupar {
-    display: flex;
-    justify-content: center;
-  }
+
 }
